@@ -1,5 +1,5 @@
 import pygame
-import random
+from random import randint as rand
 
 class Dice(object):
 
@@ -19,7 +19,7 @@ class Dice(object):
             gameDisplay.blit(self.dice[i], (700,60))
             pygame.display.update()
             pygame.time.delay(100)
-        self.num = random.randint(1, 6)
+        self.num = rand(1, 6)
         gameDisplay.blit(self.dice[self.num - 1], (700,60))
         print("dice: "+ str(self.num))
         return self.num
